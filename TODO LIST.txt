@@ -1,0 +1,47 @@
+Task2:
+
+During development, make sure you:
+
+• gather and prepare appropriate assets to be used in the development of your 
+digital solution
+
+• document the iterative development process, including changes made to the 
+solution during development
+
+• produce code that can be maintained by a third‑party
+
+• ensure a high‑quality user experience
+
+• follow legal and regulatory guidelines and standards.
+
+When gathering assets, you need to record the sources you use in an assets log.
+Your log must:
+
+• record all the sources you have used
+
+• describe the content and its intended purpose
+
+• log the date on which you retrieved the information.
+
+Your testing documentation does not need to include details of every test carried out. 
+However, it should demonstrate:
+
+• an iterative approach to testing
+
+• an understanding of how to test inputs, calculations, validation, and processes using 
+appropriate test data.
+
+TLDR:
+- maintainale code
+- document changes (test log)   
+
+
+Code log:
+- heading bar, fix off screening.
+- add effects
+- add links
+- add comments when doing js
+- go over id/classes in css (change some)
+
+Justification notes:
+- div background-img is easier than img but doesnt let you do alt text (accessability)
