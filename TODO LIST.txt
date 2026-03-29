@@ -37,8 +37,6 @@ TLDR:
 
 
 Code log:
-- heading bar, fix off screening.
-- add effects
 - add links
 - add comments when doing js
 - go over id/classes in css (change some)

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="HomePageStyle.css">
     <title>Document</title>
 </head>
 
@@ -13,24 +13,24 @@
         <div id="navSection1">
             <h2 id="title">Greenfield Local Hub</h2>
             <div>
-                <button>HOME</button>
-                <button>SHOP</button>
-                <button>INFO</button>
-                <button>PRODUCERS</button>
+                <a href="Home_Page.html"><button>HOME</button></a>
+                <a href="Shop_Page.html"><button>SHOP</button></a>
+                <a href=""></a><button>INFO</button></a>
+                <a href=""></a><button>PRODUCERS</button></a>
             </div>
         </div>
         <div id="navSection2">
-            <img src="Images/Basket_icon.png" alt="Basket">
-            <img src="Images/Search_icon.png" alt="Search">
-            <img src="Images/Account_icon.png" alt="Account">
+            <a href="" draggable="false"><img src="Images/Basket_icon.png" alt="Basket" draggable="false"></a>
+            <a href="" draggable="false"><img src="Images/Search_icon.png" alt="Search" draggable="false"></a>
+            <a href="" draggable="false"><img src="Images/Account_icon.png" alt="Account" draggable="false"></a>
         </div>
     </div>
 </header>
 <body>
-    <div class="carousel">
+    <div id="carousel">
         <div class="slides">
             <div class="slide">
-                <img src="Images/MeatBannerPhoto.jpg" alt="Assortment of Meats">
+                <img src="Images/MeatBannerPhoto.jpg" alt="Assortment of Meats" draggable="false">
                 <div class="text">
                     <h1>Fresh and Rich Meats</h1>
                     <p>Direct from our producers, straight to your door.</p>
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div class="slide">
-                <img src="Images/FarmerInSunLight.png" alt="Hardworking Farmer">
+                <img src="Images/FarmerInSunLight.png" alt="Hardworking Farmer" draggable="false">
                 <div class="text">
                     <h1>Caring for the land</h1>
                     <p>Learn more about our hard working producers, farmers and suppliers.</p>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="slide">
-                <img src="Images/vegBannerPhoto.jpg" alt="Assortment of Vegetables">
+                <img src="Images/vegBannerPhoto.jpg" alt="Assortment of Vegetables" draggable="false">
                 <div class="text">
                     <h1>Locally Harvested Veg</h1>
                     <p>Crisp and juicy vegetables harvested from our local farms.</p>
@@ -55,6 +55,7 @@
             </div>
         </div>
     </div>
+
     <div class="subheading">
         <h1>Our Farm</h1>
     </div>
@@ -71,7 +72,7 @@
     <div class="heading">25% off Fruits until Mar 25th!</div>
 
     <div class="showCaseProduct">
-        <img src="Images/CarrotProduct.jpg" alt="Fresh Carrots">
+        <img src="Images/CarrotProduct.jpg" alt="Fresh Carrots" draggable="false">
 
         <div class="showCaseSubSection">
             <div class="showCaseInfo">
@@ -88,23 +89,25 @@
 
     <div class="productSection">
         <div id="meatProduct">
-            <button><a>Shop Now</a></button>
+            <a><button>Shop Now</button></a>
         </div>
         <div id="eggProduct">
-            <button><a>Shop Now</a></button>
+            <a><button>Shop Now</button></a>
         </div>
     </div>
 
     <div class="infoSection"> 
         <div class="imageContainer">
-            <img src="Images/EggProduct.jpg" alt="">
-            <img src="Images/FarmerInCorn.png" alt="">
+            <img src="Images/potatoField.jpg" alt="" draggable="false">
+            <img src="Images/potatoFarmer.jpg" alt="" draggable="false">
         </div>
         <div class="infoSectionInfo">
             <h2>Direct from our suppliers</h2>
             <p>We source all our produce directly from local farmers, producers and suppliers.</p>
         </div>
     </div>
+
+    <button id="ToTopButton" onclick='scrollToTarget("carousel")'>To Top</button>
 
     <footer>
         <div class="footerSubSectionA">
@@ -133,5 +136,6 @@
         </div>
     </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
