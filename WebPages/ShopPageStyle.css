@@ -3,13 +3,11 @@
 body, html {
     margin: 0;
 }
+
 body {
+    display: flexbox;
     background-color: #fbffda;
     justify-content: center;
-}
-
-body img {
-    transition: all 0.5s;
 }
 
 body img:hover {
@@ -86,6 +84,11 @@ header button {
     border-radius: 5px;
     font-size: 13px;
     color: white;
+    transition: all 0.05s;
+}
+
+header button:hover {
+    transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
@@ -147,7 +150,7 @@ header button {
     padding-inline: 100px;
     justify-content: center;
     align-items: center;
-    font-size: min(10px, 2vw);
+    font-size: max(10px, 0.75vw);
     border: 3px solid #79861a;
 }
 
@@ -157,23 +160,49 @@ header button {
 }
 
 .OrderOptions {
-    float: right;
-    margin-inline: 100px;
-    margin-block: 10px;
+    margin-inline: 200px;
+    margin-block: 50px;
 }
 
 .OrderOptions select {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    color: white;
     text-align: center;
+    background-color: #79861a;
+    border: 2px solid #d3e171;
 }
 
 .productGrid {
     display: grid;
-    grid-gap: 20px;
     justify-self: center;
-    align-self: center;
-    width: 40%;
-    grid-template-columns: repeat(3, 33%)
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%;
+    grid-template-columns: repeat(3, 20vw);
 }
+
+.productGrid img {
+    width: 20vw;
+    height: 20vw;
+    border: 2px solid black;
+    object-fit: cover;
+}
+
+.product {
+    margin-bottom: 50px;
+    transition: all 0.5s;
+}
+
+.product:hover {
+    transform: scale(1.1);
+}
+
+.product h1, .product div {
+    margin: 15px;
+}
+
 
 
 /* FOOTER */

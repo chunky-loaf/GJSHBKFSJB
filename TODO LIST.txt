@@ -36,7 +36,15 @@ TLDR:
 - document changes (test log)   
 
 
-Code log:
+
+
+
+
+TODO:
+- add js to add new products:
+        producer page with form to insert info -> create a new element in shop page.
+
+
 - add links
 - add comments when doing js
 - go over id/classes in css (change some)

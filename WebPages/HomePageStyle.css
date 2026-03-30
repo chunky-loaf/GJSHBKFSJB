@@ -32,6 +32,7 @@ header img {
     height: auto;
     margin: 10px;
 }
+
 #title {
     font-family: Georgia, serif;
     margin-block: 5px;
@@ -421,13 +422,6 @@ footer ul:hover {
 
 #meatProduct:hover, #eggProduct:hover {
     transform: scale(1.05);
-} 
-
-
-
-#test {
-    pointer-events: all;
-    user-select: all;
 }
 
 
