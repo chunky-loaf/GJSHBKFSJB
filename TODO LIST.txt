@@ -41,9 +41,12 @@ TLDR:
 
 
 TODO:
+
 - add js to add new products:
         producer page with form to insert info -> create a new element in shop page.
 
+- make direct from suppliers on home bigger
+- add pseudo class: activate
 
 - add links
 - add comments when doing js

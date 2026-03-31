@@ -5,9 +5,12 @@ body, html {
 }
 
 body {
-    display: flexbox;
     background-color: #fbffda;
     justify-content: center;
+}
+
+body img {
+    transition: all 0.5s;
 }
 
 body img:hover {
@@ -18,7 +21,16 @@ html {
     user-select: none;
 }
 
-/* NAVIGATION */
+html button {
+    transition: all 0.05s;
+    cursor: pointer;
+}
+
+html button:hover {
+    transform: scale(1.1);
+}
+
+/* NAVIGATION BAR */
 
 header img {
     width: 35px;
@@ -103,7 +115,7 @@ header button:hover {
 }
 
 
-/* CAROUSEL */
+/* CAROUSEL BANNER */
 
 #carousel {
 	color: rgb(255, 255, 255);
@@ -130,7 +142,6 @@ header button:hover {
   height: 60vh;
   object-fit: cover;
   display: block;
-  pointer-events: none;
 }
 
 #carousel button {
@@ -142,6 +153,7 @@ header button:hover {
     font-size: 90%;
     margin: 5px;
 }
+
 
 /* MAIN CONTENT */
 
@@ -172,6 +184,7 @@ header button:hover {
     text-align: center;
     background-color: #79861a;
     border: 2px solid #d3e171;
+    border-radius: 15px;
 }
 
 .productGrid {
@@ -203,6 +216,25 @@ header button:hover {
     margin: 15px;
 }
 
+.product button {
+    background-color: #d3e171;
+    border: 1px solid #79861a;
+    width: 50px;
+    height: 20px;
+}
+
+.LoadMoreButton {
+    width: 100px;
+    height: 25px;
+    background-color: #79861a;
+    color: white;
+    border: 2px solid #e2eba0;
+}
+
+.LoadButtonContainer {
+    justify-self: center;
+    align-self: center;
+}
 
 
 /* FOOTER */
@@ -215,6 +247,7 @@ header button:hover {
     border-radius: 100%;
     background-color: #d3e171;
 }
+
 
 footer ul {
     display: flex;
@@ -252,7 +285,7 @@ footer ul {
 }
 
 footer ul {
-    width: 40%;
+    width: 30%;
     margin: auto;
     transition: all 0.5s;
 }
@@ -260,6 +293,7 @@ footer ul {
 footer ul:hover {
     transform: scale(1.1);
 }
+
 
 @keyframes slide {
   0%, 30%   { transform: translateX(0); }
