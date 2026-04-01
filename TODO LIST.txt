@@ -45,12 +45,26 @@ TODO:
 - add js to add new products:
         producer page with form to insert info -> create a new element in shop page.
 
-- make direct from suppliers on home bigger
-- add pseudo class: activate
 
-- add links
-- add comments when doing js
+- ADD PRICES OF PRODUCTS IN SHOW PAGE ASAP
+- make signin page inputs display block.
+- find banner photos for info page
+- fix info page scaling
+- make the "direct from suppliers" section on the home page bigger 
+- add pseudo class: activate for buttons and images
+
+- add links to buttons  
+- add comments to html/css/js
 - go over id/classes in css (change some)
 
 Justification notes:
 - div background-img is easier than img but doesnt let you do alt text (accessability)
+
+PAGES:
+- animal info page
+- shop info page 
+- produce info page
+- producer info page 
+- login/signup page 
+- dashboard + producer dashboard 
+- checkout page 

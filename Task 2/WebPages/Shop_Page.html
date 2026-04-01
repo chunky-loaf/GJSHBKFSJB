@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Images/NoBgLogo.png">
+    <link rel="stylesheet" href="ShopPageStyle.css">
+    <title>Buy Now</title>
+</head>
+
+<header>
+    <div id="AnnouncementsBar">New Brioche Bread In stock Now!</div>
+    <div id="innerNav">
+        <div id="navSection1">
+            <h2 id="title">Greenfield Local Hub</h2>
+            <div>
+                <a href="Home_Page.html"><button>HOME</button></a>
+                <a href="Shop_Page.html"><button>SHOP</button></a>
+                <a href="Info_Page.html"><button>INFO</button></a>
+                <a href=""><button>PRODUCERS</button></a>
+            </div>
+        </div>
+        
+        <div id="navSection2">
+            <a href="" draggable="false"><img src="Images/Basket_icon.png" alt="Basket" draggable="false"></a>
+            <a href="" draggable="false"><img src="Images/Search_icon.png" alt="Search" draggable="false"></a>
+            <a href="Account_Page.html" draggable="false"><img src="Images/Account_icon.png" alt="Account" draggable="false"></a>
+        </div>
+    </div>
+</header>
+
+<body>
+    <div id="carousel">
+        <div class="slides">
+            <div class="slide">
+                <img src="Images/farmShopBannerPhoto1.jpg" alt="Farm shop interior" draggable="false">
+            </div>
+            <div class="slide">
+                <img src="Images/farmShopBannerPhoto2.png" alt="Farm shop interior" draggable="false">
+            </div>
+            <div class="slide">
+                <img src="Images/farmShopBannerPhoto3.webp" alt="Farm shop interior" draggable="false">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="CategoryList">
+        <a href=""><h1>MEATS</h1></a>
+        <a href=""><h1>PASTRY</h1></a>
+        <a href=""><h1>DAIRY</h1></a>
+        <a href=""><h1>DRINKS</h1></a>
+        <a href=""><h1>ALL</h1></a>
+    </div>
+
+    <form class="OrderOptions">
+        <select name="">
+            <option value="">Filter Options</option>
+            <option value="">A-Z</option>
+            <option value="">Z-A</option>
+            <option value="">Newest</option>
+            <option value="">Oldest</option>
+            <option value="">Lowest Value</option>
+            <option value="">Highest Value</option>
+        </select>
+    </form>
+
+    <div class="productGrid">
+
+        <div class="product">
+            <img src="Images/EggProduct.jpg" alt="Fresh Eggs">
+            <h1>Fresh Eggs</h1>
+            <div>
+                <button type="submit">Buy</button>
+                <input type="number" min="6" max="24" step="6" value="6">
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="Images/SteakProduct.jpg" alt="Fresh Steak">
+            <h1>Beef Steak 3oz</h1>
+            <div>
+                <button type="submit">Buy</button>
+                <input type="number" min="0" max="10" value="1">
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="Images/CarrotProduct.jpg" alt="Carrots">
+            <h1>Large Carrots (5)</h1>
+            <div>
+                <button type="submit">Buy</button>
+                <input type="number" min="0" max="10" value="1">
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="Images/BlueCheeseProduct.jpg" alt="Blue Cheese">
+            <h1>Dolcelatte Cheese 2oz</h1>
+            <div>
+                <button type="submit">Buy</button>
+                <input type="number" min="0" max="10" value="1">
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="Images/SconeProduct.jpg" alt="Baked Scones">
+            <h1>Baked Scones</h1>
+            <div>
+                <button type="submit">Buy</button>
+                <input type="number" min="4" max="20" step="4" value="4">
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="Images/WineProduct.jpg" alt="Bottle of wine">
+            <h1>White Wine 1L</h1>
+            <div>
+                <button type="submit">Buy</button>
+                <input type="number" min="0" max="10" value="1">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="LoadButtonContainer">
+        <button class="LoadMoreButton">Load More</button>
+    </div>
+
+
+    <button id="ToTopButton" onclick='scrollToTarget("carousel")'>To Top</button>
+
+    <footer>
+        <div class="footerSubSectionA">
+            <ul>
+                <a href="">SHOP PROUCTS</a>
+                <a href="">LEARN MORE</a>
+                <a href="">DELIVERY OPTIONS</a>
+                <a href="">CONTACT US</a>
+                <a href="">ABOUT US</a>
+            </ul>
+
+            <ul>
+                <h2>SOMERSET</h2>
+                <p>Mon-Fri: 12pm-4pm</p>
+                <h4>Address</h4>
+                <p>DimbleThugger Farm, Heathward SH6 7TS</p>
+                <h4>Contact</h4>
+                <p>Contact@GFLH.uk</p>
+            </ul>
+        </div>
+
+        <div class="footerSubSectionB">
+            <ul>
+                <a href="">FAQs</a>
+                <a href="">Privacy Policy</a>
+                <a href="">Accessability Standards</a>
+            </ul>
+        </div>
+    </footer>
+
+    
+<script src="script.js"></script>
+
+</body>
