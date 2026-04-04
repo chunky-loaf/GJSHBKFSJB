@@ -50,6 +50,7 @@ CSS:
 
 
 Justification notes:
+- changed the shop categories to accomidate all options.
 - div background img is easier to implemenet than img element, but doesnt let you do alt text. (accessability)
 
 PAGES:
