@@ -137,9 +137,9 @@ header button {
 }
 
 .searchWrapper.active #searchInput {
-    width: 150px;      /* expand */
-    opacity: 1;        /* fade in */
-    padding: 5px;      /* give space for text */
+    width: 150px;
+    opacity: 1;
+    padding: 5px;
 }   
 
 .searchWrapper img {

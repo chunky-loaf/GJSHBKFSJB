@@ -26,6 +26,7 @@ appropriate test data.
 TODO:
 
 JS:
+- make the "load more" button work.
 - add js to add new products: producer page with form to insert info -> create a new element in shop page.
 
 
@@ -63,11 +64,11 @@ PAGES:
 
 
 TEST LOG NOTES:
+
 - search bar:
     t1 - open shop page on submit = didnt work.
     edit - changed file name in target
     t2 - open shop page on submit = worked
-    t3 - go to element of searched text = didnt work.
     edit - use search for index of text 
     t4 - go to element of searched text = didnt go to correct element.
     edit - searched for parent of index
