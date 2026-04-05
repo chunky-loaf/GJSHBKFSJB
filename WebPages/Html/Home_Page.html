@@ -46,7 +46,7 @@
                 <div class="text">
                     <h1>Fresh and Rich Meats</h1>
                     <p>Direct from our producers, straight to your door.</p>
-                    <button>Shop Now</button>
+                    <button onclick="goToShop('MEATS')">Shop Now</button>
                 </div>
             </div>
             <div class="slide">
@@ -54,7 +54,7 @@
                 <div class="text">
                     <h1>Caring for the land</h1>
                     <p>Learn more about our hard working producers, farmers and suppliers.</p>
-                    <button>Learn More</button>
+                    <a href="/WebPages/Html/ProducerInfo_Page.html"><button>Learn More</button></a>
                 </div>
             </div>
             <div class="slide">
@@ -62,7 +62,7 @@
                 <div class="text">
                     <h1>Locally Harvested Veg</h1>
                     <p>Crisp and juicy vegetables harvested from our local farms.</p>
-                    <button>Shop Now</button>
+                    <button onclick="goToShop('VEG')">Shop Now</button>
                 </div>
             </div>
         </div>
@@ -74,10 +74,10 @@
 
     <div class="learnMoreSection">
         <div id="learnMoreShopPicture">
-            <button><a>Learn More</a></button>
+            <a href="/WebPages/Html/Info_Page.html"><button><a>Learn More</a></button></a>
         </div>
         <div id="learnMoreFarmerPicture">
-            <button><a>Learn More</a></button>
+            <a href="/WebPages/Html/ProducerInfo_Page.html"><button><a>Learn More</a></button></a>
         </div>
     </div>
 
@@ -88,8 +88,8 @@
 
         <div class="showCaseSubSection">
             <div class="showCaseInfo">
-                <h1>Fresh Carrots</h1>
-                <h4>£4/LB</h1>
+                <h1>Large Carrots (5)</h1>
+                <h4>£4/LB</h4>
                 <p>Tasty carrots grown locally by our producers.</p>
             </div>
             <div class="showCaseButtons">
@@ -101,10 +101,10 @@
 
     <div class="productSection">
         <div id="meatProduct">
-            <a><button>Shop Now</button></a>
+            <button onclick="goToShop('MEATS')">Shop Now</button>
         </div>
         <div id="eggProduct">
-            <a><button>Shop Now</button></a>
+            <button onclick="goToShop('PRODUCE')">Shop Now</button>
         </div>
     </div>
 

@@ -1,3 +1,4 @@
+// The function used to go to the top of the page.
 function scrollToTarget(element) {
   const target = document.getElementById(element);
 
@@ -9,20 +10,20 @@ function scrollToTarget(element) {
 
 
 
-
+// Search bar functionality.
 const searchBtn = document.getElementById("searchBtn");
 const searchInput = document.getElementById("searchInput");
 const searchWrapper = searchBtn?.parentElement;
-
+// Su
 searchBtn?.addEventListener("click", () => {
     searchWrapper.classList.toggle("active");
     if (searchWrapper.classList.contains("active")) searchInput.focus();
 });
-
+// Submission functionality for search input.
 searchInput?.addEventListener("keypress", ({ key }) => {
     if (key !== "Enter") return;
     const query = searchInput.value.trim();
-    if (query) window.location.href = `Shop_Page.html?q=${encodeURIComponent(query)}`;
+    if (query) window.location.href = `/WebPages/Html/Shop_Page.html?q=${encodeURIComponent(query)}`;
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -73,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     filterProducts(initialCategory);
     setActiveLink(initialCategory);
-
+    
     document.querySelectorAll('.CategoryList a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -103,5 +104,5 @@ function setActiveLink(category) {
 }
 
 function goToShop(category) {
-    window.location.href = `/shop.html?category=${encodeURIComponent(category.toUpperCase())}`;
+    window.location.href = `/WebPages/Html/Shop_Page.html?category=${encodeURIComponent(category.toUpperCase())}`;
 }   

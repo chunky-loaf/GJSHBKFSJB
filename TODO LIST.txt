@@ -25,16 +25,18 @@ appropriate test data.
 
 TODO:
 
+- add accessability features.
+
+
 JS:
 - make the "load more" button work.
 - add js to add new products: producer page with form to insert info -> create a new element in shop page.
 
 
-
 HTML:
+- add and expand information on all pages.
 - add prices to products in the shop page.
 - make signin page inputs display as block.
-- find banner photos for info page.
 - fix info page scaling.
 
 
@@ -46,10 +48,15 @@ CSS:
 - add :active 
 
 
-
+TEST LOG:
+- perform tests after completion:
+    boundary
+    erronious 
+    etc
 
 
 Justification notes:
+- accessability isnt consistant across the website.
 - changed the shop categories to accomidate all options.
 - div background img is easier to implemenet than img element, but doesnt let you do alt text. (accessability)
 
@@ -62,15 +69,3 @@ PAGES:
 - login/signup page 
 - dashboard + producer dashboard 
 - checkout page 
-
-
-TEST LOG NOTES:
-
-- search bar:
-    t1 - open shop page on submit = didnt work.
-    edit - changed file name in target
-    t2 - open shop page on submit = worked
-    edit - use search for index of text 
-    t4 - go to element of searched text = didnt go to correct element.
-    edit - searched for parent of index
-    t5 - go to element of searched text = worked.
