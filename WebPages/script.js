@@ -94,10 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Filters products based on the selected category.
 function filterProducts(category) {
-    document.querySelectorAll('.product').forEach(product => {
-        const match = category === 'ALL' || product.dataset.product === category;
-        product.style.display = match ? '' : 'none';
+    document.querySelectorAll(".product").forEach(p => {
+        p.style.display = category === "ALL" || p.dataset.product === category ? "" : "none";
     });
+    visibleCount = PAGE_SIZE;
+    updateProducts();
 }
 // Highlights the target search text.
 function setActiveLink(category) {
@@ -118,6 +119,7 @@ document.getElementById("sortSelect")?.addEventListener("change", ({ target }) =
     const grid = document.querySelector(".productGrid");
     const products = [...grid.querySelectorAll(".product")];
 
+    const getValue = el => parseFloat(el.dataset.price) || 0;
     const getName = el => el.querySelector("h1").textContent.trim().toLowerCase();
     const getIndex = el => [...grid.children].indexOf(el);
     // Map of the list of products.
@@ -131,4 +133,28 @@ document.getElementById("sortSelect")?.addEventListener("change", ({ target }) =
     };
 
     products.sort(sorters[target.value] || (() => 0)).forEach(p => grid.appendChild(p));
+    visibleCount = PRODUCT_SIZE;
+    updateProducts();
+});
+
+// load more products functionality.
+const PRODUCT_SIZE = 6;
+let visibleCount = PRODUCT_SIZE;
+
+window.addEventListener("DOMContentLoaded", () => {
+    const grid = document.querySelector(".productGrid");
+    const loadMoreBtn = document.querySelector(".LoadMoreButton");
+
+    function updateProducts() {
+        const products = [...grid.querySelectorAll(".product")];
+        products.forEach((p, i) => p.style.display = i < visibleCount ? "" : "none");
+        loadMoreBtn.style.display = visibleCount >= products.length ? "none" : "";
+    }
+
+    loadMoreBtn?.addEventListener("click", () => {
+        visibleCount = Infinity;
+        updateProducts();
+    });
+
+    updateProducts();
 });

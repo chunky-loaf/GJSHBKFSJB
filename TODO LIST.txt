@@ -29,14 +29,13 @@ TODO:
 
 
 JS:
+- add a popularity score to order products by.
 - make max product = stock from db
-- make the "load more" button work.
 - add js to add new products: producer page with form to insert info -> create a new element in shop page.
 
 
 HTML:
 - add and expand information on all pages.
-- add prices to products in the shop page.
 - make signin page inputs display as block.
 - fix info page scaling.
 
