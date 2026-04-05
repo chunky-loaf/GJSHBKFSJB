@@ -29,6 +29,7 @@ TODO:
 
 
 JS:
+- make max product = stock from db
 - make the "load more" button work.
 - add js to add new products: producer page with form to insert info -> create a new element in shop page.
 

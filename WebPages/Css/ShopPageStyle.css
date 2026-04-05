@@ -243,7 +243,7 @@ header button:hover {
 .product {
     margin-bottom: 50px;
     transition: all 0.5s;
-    height: max(250px, 25vw);
+    height: max(250px, 28vw);
 }
 
 .product:hover {

@@ -25,7 +25,7 @@ searchInput?.addEventListener("keypress", ({ key }) => {
     const query = searchInput.value.trim();
     if (query) window.location.href = `/WebPages/Html/Shop_Page.html?q=${encodeURIComponent(query)}`;
 });
-
+// Highlights the target search text on the shop page.
 window.addEventListener("DOMContentLoaded", () => {
     const query = new URLSearchParams(window.location.search).get("q");
     if (!query) return;
@@ -34,7 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     const textNodes = [];
     const matches = [];
-
+    // Collects all text nodes containing the search query, excluding certain tags.
     let node;
     while ((node = walker.nextNode())) {
         const { parentNode: parent, textContent: text } = node;
@@ -42,15 +42,15 @@ window.addEventListener("DOMContentLoaded", () => {
         if (tag === "SCRIPT" || tag === "STYLE" || tag === "MARK") continue;
         if (text.toLowerCase().includes(lowerQuery)) textNodes.push({ node, parent, text });
     }
-
+    // Highlights the search query in the collected text nodes.
     for (const { node, parent, text } of textNodes) {
         const lowerText = text.toLowerCase();
         const frag = document.createDocumentFragment();
         let lastIndex = 0, index;
-
+        // Splits the text node into parts, wrapping matches in <mark> elements.
         while ((index = lowerText.indexOf(lowerQuery, lastIndex)) !== -1) {
             if (index > lastIndex) frag.appendChild(document.createTextNode(text.slice(lastIndex, index)));
-
+            // Creates a <mark> element for the matched text.
             const mark = Object.assign(document.createElement("mark"), {
                 textContent: text.slice(index, index + lowerQuery.length)
             });
@@ -59,7 +59,7 @@ window.addEventListener("DOMContentLoaded", () => {
             matches.push(mark);
             lastIndex = index + lowerQuery.length;
         }
-
+        // Appends any remaining text after the last match.
         if (lastIndex < text.length) frag.appendChild(document.createTextNode(text.slice(lastIndex)));
         parent.replaceChild(frag, node);
     }
@@ -68,13 +68,15 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 
+
+// Shop page category filtering.
 document.addEventListener('DOMContentLoaded', () => {
     const params = new URLSearchParams(window.location.search);
     const initialCategory = params.get('category')?.toUpperCase() || 'ALL';
 
     filterProducts(initialCategory);
     setActiveLink(initialCategory);
-    
+    // Adds click event listeners to category links for filtering products and updating the URL.
     document.querySelectorAll('.CategoryList a').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -89,20 +91,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
+// Filters products based on the selected category.
 function filterProducts(category) {
     document.querySelectorAll('.product').forEach(product => {
         const match = category === 'ALL' || product.dataset.product === category;
         product.style.display = match ? '' : 'none';
     });
 }
-
+// Highlights the target search text.
 function setActiveLink(category) {
     document.querySelectorAll('.CategoryList a').forEach(link => {
         const isActive = link.querySelector('h1').textContent.trim() === category;
         link.classList.toggle('active', isActive);
     });
 }
-
+// Open the shop page to a specific category.
 function goToShop(category) {
     window.location.href = `/WebPages/Html/Shop_Page.html?category=${encodeURIComponent(category.toUpperCase())}`;
-}   
+}  
+
+
+
+// Shop filter options.
+document.getElementById("sortSelect")?.addEventListener("change", ({ target }) => {
+    const grid = document.querySelector(".productGrid");
+    const products = [...grid.querySelectorAll(".product")];
+
+    const getName = el => el.querySelector("h1").textContent.trim().toLowerCase();
+    const getIndex = el => [...grid.children].indexOf(el);
+    // Map of the list of products.
+    const sorters = {
+        az:     (a, b) => getName(a).localeCompare(getName(b)),
+        za:     (a, b) => getName(b).localeCompare(getName(a)),
+        newest: (a, b) => getIndex(a) - getIndex(b),
+        oldest: (a, b) => getIndex(b) - getIndex(a),
+        low:    (a, b) => getValue(a) - getValue(b),
+        high:   (a, b) => getValue(b) - getValue(a),
+    };
+
+    products.sort(sorters[target.value] || (() => 0)).forEach(p => grid.appendChild(p));
+});
