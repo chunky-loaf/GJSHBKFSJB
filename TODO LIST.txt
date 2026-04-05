@@ -61,6 +61,7 @@ Justification notes:
 - div background img is easier to implemenet than img element, but doesnt let you do alt text. (accessability)
 
 PAGES:
+- FAQ/accessability/privacy information page.
 - animal info page
 - shop info page 
 - produce info page
