@@ -203,9 +203,11 @@ header button:hover {
     border: 3px solid #79861a;
 }
 
-.CategoryList a {
+.CategoryList h1 {
     margin-inline: 2vw;
     color: black;
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .OrderOptions {

@@ -77,10 +77,9 @@ document.addEventListener('DOMContentLoaded', () => {
     filterProducts(initialCategory);
     setActiveLink(initialCategory);
     // Adds click event listeners to category links for filtering products and updating the URL.
-    document.querySelectorAll('.CategoryList a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const category = link.querySelector('h1').textContent.trim();
+    document.querySelectorAll('.CategoryList h1').forEach(h1 => {
+        h1.addEventListener('click', () => {
+            const category = h1.textContent.trim();
             filterProducts(category);
             setActiveLink(category);
 
@@ -102,9 +101,8 @@ function filterProducts(category) {
 }
 // Highlights the target search text.
 function setActiveLink(category) {
-    document.querySelectorAll('.CategoryList a').forEach(link => {
-        const isActive = link.querySelector('h1').textContent.trim() === category;
-        link.classList.toggle('active', isActive);
+    document.querySelectorAll('.CategoryList h1').forEach(h1 => {
+        h1.classList.toggle('active', h1.textContent.trim() === category);
     });
 }
 // Open the shop page to a specific category.
@@ -115,14 +113,15 @@ function goToShop(category) {
 
 
 // Shop filter options.
-document.getElementById("sortSelect")?.addEventListener("change", ({ target }) => {
-    const grid = document.querySelector(".productGrid");
+document.getElementById("sortSelect")?.addEventListener("change", (e) => {
+    e.preventDefault();
+    const { target } = e;
     const products = [...grid.querySelectorAll(".product")];
 
     const getValue = el => parseFloat(el.dataset.price) || 0;
     const getName = el => el.querySelector("h1").textContent.trim().toLowerCase();
-    const getIndex = el => [...grid.children].indexOf(el);
-    // Map of the list of products.
+    const getIndex = el => parseInt(el.dataset.index);
+
     const sorters = {
         az:     (a, b) => getName(a).localeCompare(getName(b)),
         za:     (a, b) => getName(b).localeCompare(getName(a)),
@@ -133,28 +132,39 @@ document.getElementById("sortSelect")?.addEventListener("change", ({ target }) =
     };
 
     products.sort(sorters[target.value] || (() => 0)).forEach(p => grid.appendChild(p));
-    visibleCount = PRODUCT_SIZE;
     updateProducts();
 });
 
 // load more products functionality.
 const PRODUCT_SIZE = 6;
 let visibleCount = PRODUCT_SIZE;
+let activeCategory = 'ALL';
+
+const grid = document.querySelector(".productGrid");
+const loadMoreBtn = document.querySelector(".LoadMoreButton");
+
+function updateProducts() {
+    const products = [...grid.querySelectorAll(".product")];
+    const visible = products.filter(p => activeCategory === 'ALL' || p.dataset.product === activeCategory);
+    const hidden = products.filter(p => activeCategory !== 'ALL' && p.dataset.product !== activeCategory);
+
+    hidden.forEach(p => p.style.display = "none");
+    visible.forEach((p, i) => p.style.display = i < visibleCount ? "" : "none");
+
+    if (loadMoreBtn) loadMoreBtn.style.display = visibleCount >= visible.length ? "none" : "";
+}
+
+function filterProducts(category) {
+    activeCategory = category;
+    visibleCount = PRODUCT_SIZE;
+    updateProducts();
+}
+
+loadMoreBtn?.addEventListener("click", () => {
+    visibleCount = Infinity;
+    updateProducts();
+});
 
 window.addEventListener("DOMContentLoaded", () => {
-    const grid = document.querySelector(".productGrid");
-    const loadMoreBtn = document.querySelector(".LoadMoreButton");
-
-    function updateProducts() {
-        const products = [...grid.querySelectorAll(".product")];
-        products.forEach((p, i) => p.style.display = i < visibleCount ? "" : "none");
-        loadMoreBtn.style.display = visibleCount >= products.length ? "none" : "";
-    }
-
-    loadMoreBtn?.addEventListener("click", () => {
-        visibleCount = Infinity;
-        updateProducts();
-    });
-
     updateProducts();
 });

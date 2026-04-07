@@ -35,14 +35,14 @@ JS:
 
 
 HTML:
+- add more unique products to the shop page.
 - add and expand information on all pages.
 - make signin page inputs display as block.
 - fix info page scaling.
 
 
 
-CSS:
-- add links to buttons  
+CSS: 
 - add comments to html/css/js
 - go over id/classes in css (change some)
 - add :active 
@@ -56,7 +56,7 @@ TEST LOG:
 
 
 Justification notes:
-- accessability isnt consistant across the website.
+- accessability isnt consistant across the website. (tab navigation)
 - changed the shop categories to accomidate all options.
 - div background img is easier to implemenet than img element, but doesnt let you do alt text. (accessability)
 
