@@ -25,21 +25,23 @@ appropriate test data.
 
 TODO:
 
+- double check everything + make it realistic.
 - add accessability features.
 
 
 JS:
-- add a popularity score to order products by.
-- make max product = stock from db
+- make the website functional from each page. e.g. adding new products via buttons and input fields.
+- add a popularity score to order products by: backend order.
+- make max product = stock from db.
 - add js to add new products: producer page with form to insert info -> create a new element in shop page.
 
 
 HTML:
+- make support page sound more human.
 - add more unique products to the shop page.
 - add and expand information on all pages.
 - make signin page inputs display as block.
 - fix info page scaling.
-
 
 
 CSS: 
@@ -61,7 +63,6 @@ Justification notes:
 - div background img is easier to implemenet than img element, but doesnt let you do alt text. (accessability)
 
 PAGES:
-- FAQ/accessability/privacy information page.
 - animal info page
 - shop info page 
 - produce info page

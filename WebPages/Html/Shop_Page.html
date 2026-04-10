@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/WebPages/Images/NoBgLogo.png">
+    <link rel="icon" type="image/x-icon" href="/WebPages/Images/Icon/Logo.png">
     <link rel="stylesheet" href="/WebPages/Css/ShopPageStyle.css">
     <title>Buy Now</title>
 </head>
 
+<!-- NAVIGATION BAR -->
 <header>
     <div id="AnnouncementsBar">New Brioche Bread In stock Now!</div>
     <div id="innerNav">
@@ -23,16 +24,16 @@
 
         <div id="navSection2">
             <a href="" draggable="false">
-                <img src="/WebPages/Images/Basket_icon.png" alt="Basket" draggable="false">
+                <img src="/WebPages/Images/Icon/BasketIcon.png" alt="Basket" draggable="false">
             </a>
 
             <div class="searchWrapper">
-                <img src="/WebPages/Images/Search_icon.png" alt="Search" id="searchBtn" draggable="false">
+                <img src="/WebPages/Images/Icon/SearchIcon.png" alt="Search" id="searchBtn" draggable="false">
                 <input type="text" id="searchInput" placeholder="Search...">
             </div>
 
             <a href="/WebPages/Html/Account_Page.html" draggable="false">
-                <img src="/WebPages/Images/Account_icon.png" alt="Account" draggable="false">
+                <img src="/WebPages/Images/Icon/AccountIcon.png" alt="Account" draggable="false">
             </a>
         </div>
     </div>
@@ -42,13 +43,13 @@
     <div id="carousel">
         <div class="slides">
             <div class="slide">
-                <img src="/WebPages/Images/farmShopBannerPhoto1.jpg" alt="Farm shop interior" draggable="false">
+                <img src="/WebPages/Images/Banner/FarmShopBannerPhoto1.jpg" alt="Farm shop interior" draggable="false">
             </div>
             <div class="slide">
-                <img src="/WebPages/Images/farmShopBannerPhoto2.png" alt="Farm shop interior" draggable="false">
+                <img src="/WebPages/Images/Banner/FarmShopBannerPhoto2.png" alt="Farm shop interior" draggable="false">
             </div>
             <div class="slide">
-                <img src="/WebPages/Images/farmShopBannerPhoto3.webp" alt="Farm shop interior" draggable="false">
+                <img src="/WebPages/Images/Banner/FarmShopBannerPhoto3.webp" alt="Farm shop interior" draggable="false">
                 </div>
             </div>
         </div>
@@ -75,19 +76,19 @@
     </form>
 
     <div class="productGrid">
-        <div data-product="PRODUCE" data-price="2.99" class="product">
-            <img src="/WebPages/Images/EggProduct.jpg" alt="Fresh Eggs">
+        <div data-product="PRODUCE" data-price="1.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/EggsInSackProduct.jpg" alt="Fresh Eggs">
             <h1>Fresh Eggs (6)</h1>
-            <h1>£2.99</h1>
+            <h1>£1.99</h1>
             <div>
                 <button type="submit">Buy</button>
                 <input type="number" min="0" max="10" step="1" value="0">
             </div>
         </div>
 
-        <div data-product="PRODUCE" data-price="2.99" class="product">
-            <img src="/WebPages/Images/EggProduct.jpg" alt="Fresh Eggs">
-            <h1>Fresh Eggs (6)</h1>
+        <div data-product="PRODUCE" data-price="2.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/EggsInCarton.jpg" alt="Fresh Eggs">
+            <h1>Free Range Eggs (6)</h1>
             <h1>£2.99</h1>
             <div>
                 <button type="submit">Buy</button>
@@ -96,7 +97,7 @@
         </div>
 
         <div data-product="MEATS" data-price="12.99" class="product">
-            <img src="/WebPages/Images/SteakProduct.jpg" alt="Fresh Steak">
+            <img src="/WebPages/Images/Product/SteaksInPaperProduct.jpg" alt="Fresh Steak">
             <h1>Beef Steak 3oz</h1>
             <h1>£12.99</h1>
             <div>
@@ -105,8 +106,8 @@
             </div>
         </div>
 
-        <div data-product="VEG" data-price="1.99" class="product">
-            <img src="/WebPages/Images/CarrotProduct.jpg" alt="Carrots">
+        <div data-product="VEG" data-price="1.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/CarrotProduct.jpg" alt="Carrots">
             <h1>Large Carrots (5)</h1>
             <h1>£1.99</h1>
             <div>
@@ -116,7 +117,7 @@
         </div>
 
         <div data-product="PRODUCE" data-price="14.99" class="product">
-            <img src="/WebPages/Images/BlueCheeseProduct.jpg" alt="Blue Cheese">
+            <img src="/WebPages/Images/Product/BlueCheeseProduct.jpg" alt="Blue Cheese">
             <h1>Dolcelatte Cheese 2oz</h1>
             <h1>£14.99</h1>
             <div>
@@ -125,8 +126,8 @@
             </div>
         </div>
 
-        <div data-product="PRODUCE" data-price="2.99" class="product">
-            <img src="/WebPages/Images/SconeProduct.jpg" alt="Baked Scones">
+        <div data-product="PRODUCE" data-price="2.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/SconesProduct.jpg" alt="Baked Scones">
             <h1>Baked Scones (4)</h1>
             <h1>£2.99</h1>
             <div>
@@ -135,8 +136,8 @@
             </div>
         </div>
 
-        <div data-product="DRINKS" data-price="18.99" class="product">
-            <img src="/WebPages/Images/WineProduct.jpg" alt="Bottle of wine">
+        <div data-product="DRINKS" data-price="18.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/WineProduct.jpg" alt="Bottle of wine">
             <h1>White Wine 1L</h1>
             <h1>£18.99</h1>
             <div>
@@ -145,28 +146,28 @@
             </div>
         </div>
 
-        <div data-product="PRODUCE" data-price="2.99" class="product">
-            <img src="/WebPages/Images/EggProduct.jpg" alt="Fresh Eggs">
+        <div data-product="PRODUCE" data-price="1.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/EggsInSackProduct.jpg" alt="Fresh Eggs">
             <h1>Fresh Eggs (6)</h1>
-            <h1>£2.99</h1>
+            <h1>£1.99</h1>
             <div>
                 <button type="submit">Buy</button>
                 <input type="number" min="0" max="10" step="1" value="0">
             </div>
         </div>
 
-        <div data-product="MEATS" data-price="12.99" class="product">
-            <img src="/WebPages/Images/SteakProduct.jpg" alt="Fresh Steak">
-            <h1>Beef Steak 3oz</h1>
-            <h1>£12.99</h1>
+        <div data-product="MEATS" data-price="22.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/SteaksProduct.jpg" alt="Fresh Steak">
+            <h1>Beef Steak 6oz</h1>
+            <h1>£22.99</h1>
             <div>
                 <button type="submit">Buy</button>
                 <input type="number" min="0" max="10" value="0">
             </div>
         </div>
 
-        <div data-product="VEG" data-price="1.99" class="product">
-            <img src="/WebPages/Images/CarrotProduct.jpg" alt="Carrots">
+        <div data-product="VEG" data-price="1.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/CarrotProduct.jpg" alt="Carrots">
             <h1>Large Carrots (5)</h1>
             <h1>£1.99</h1>
             <div>
@@ -175,8 +176,8 @@
             </div>
         </div>
 
-        <div data-product="PRODUCE" data-price="14.99" class="product">
-            <img src="/WebPages/Images/BlueCheeseProduct.jpg" alt="Blue Cheese">
+        <div data-product="PRODUCE" data-price="14.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/CheddarCheeseProduct.jpg" alt="Cheddar Cheese">
             <h1>Dolcelatte Cheese 2oz</h1>
             <h1>£14.99</h1>
             <div>
@@ -185,8 +186,8 @@
             </div>
         </div>
 
-        <div data-product="PRODUCE" data-price="2.99" class="product">
-            <img src="/WebPages/Images/SconeProduct.jpg" alt="Baked Scones">
+        <div data-product="PRODUCE" data-price="2.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/SconesProduct.jpg" alt="Baked Scones">
             <h1>Baked Scones (4)</h1>
             <h1>£2.99</h1>
             <div>
@@ -195,8 +196,8 @@
             </div>
         </div>
 
-        <div data-product="DRINKS" data-price="18.99" class="product">
-            <img src="/WebPages/Images/WineProduct.jpg" alt="Bottle of wine">
+        <div data-product="DRINKS" data-price="18.99" data-popularity="0" class="product">
+            <img src="/WebPages/Images/Product/WineProduct.jpg" alt="Bottle of wine">
             <h1>White Wine 1L</h1>
             <h1>£18.99</h1>
             <div>
@@ -235,9 +236,9 @@
 
         <div class="footerSubSectionB">
             <ul>
-                <a href="">FAQs</a>
-                <a href="">Privacy Policy</a>
-                <a href="">Accessability Standards</a>
+                <a href="/WebPages/Html/Support_Page.html">FAQs</a>
+                <a href="/WebPages/Html/Support_Page.html">Privacy Policy</a>
+                <a href="/WebPages/Html/Support_Page.html">Accessability Standards</a>
             </ul>
         </div>
     </footer>
