@@ -441,12 +441,12 @@ footer ul:hover {
 /* IMAGES */
 
 #learnMoreShopPicture {
-    background-image: url("/WebPages/Images/FarmShopFront.png");
+    background-image: url("/WebPages/Images/Banner/FarmShopFront.png");
     transition: all 0.5s;
 }
 
 #learnMoreFarmerPicture {
-    background-image: url("/WebPages/Images/FarmerInCorn.png");
+    background-image: url("/WebPages/Images/Banner/FarmerInCornField.png");
     transition: all 0.5s;
 }
 
@@ -455,12 +455,12 @@ footer ul:hover {
 } 
 
 #meatProduct {
-	background-image: url("/WebPages/Images/MeatProduct.jpg");
+	background-image: url("/WebPages/Images/Product/SteaksInPaperProduct.jpg");
     transition: all 0.5s;
 }
 
 #eggProduct {
-	background-image: url("/WebPages/Images/EggProduct.jpg");
+	background-image: url("/WebPages/Images/Product/EggsInSackProduct.jpg");
     transition: all 0.5s;
 }
 

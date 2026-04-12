@@ -143,6 +143,7 @@ let activeCategory = 'ALL';
 const grid = document.querySelector(".productGrid");
 const loadMoreBtn = document.querySelector(".LoadMoreButton");
 
+// Updates the visibility of products based on the active category and visible count.
 function updateProducts() {
     const products = [...grid.querySelectorAll(".product")];
     const visible = products.filter(p => activeCategory === 'ALL' || p.dataset.product === activeCategory);
@@ -164,7 +165,7 @@ loadMoreBtn?.addEventListener("click", () => {
     visibleCount = Infinity;
     updateProducts();
 });
-
+// Initialises the product display on page load.
 window.addEventListener("DOMContentLoaded", () => {
     updateProducts();
 });
